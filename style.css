@@ -1,0 +1,391 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    display: flex;
+    background: linear-gradient(45deg, #222020 50%, #547980 50%);
+    background-repeat:no-repeat; 
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-attachment: fixed;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo{
+    width: 7rem;
+    height: 6.1rem;
+    border-radius: 50%;
+    margin:0.3rem;
+}
+
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    list-style: none;
+  }
+nav ul li{
+    display: inline-block;
+    margin: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size:1rem;
+}
+
+nav ul li a:hover{
+    text-decoration:line-through;
+    color:#dabe21;
+}
+
+main{
+    flex-grow: 1; /* Ensures main takes up all available space */
+    padding:1rem;
+}
+
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.footer ul li{
+    display: inline-block;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    margin:1.5rem;
+}
+
+.icons:hover{
+    background-color: #c5aa132c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+
+}
+.icons{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    padding:1.3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #032c35;
+    
+}
+
+
+h1{
+    font-size: 2rem;
+    color: #8f7c14;
+    
+}
+h2{
+  color:rgb(190, 236, 136);
+    font-size: 4rem;
+    margin:0.5rem;
+    padding:1rem;
+  
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Different font for headings */
+    text-wrap: wrap;
+}
+
+.main-container img {
+    width: 100%;
+    max-width: 310px; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    margin: 2.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+.main-container p{
+    color: white;
+    margin:0.5rem;
+    line-height: 2rem;
+    padding:1rem;
+    text-wrap:wrap;
+    font-size: 1.2rem;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    word-break: break-word; /* Breaks long words */
+}
+
+.btn{
+    margin:1.5rem;
+    padding:1rem;
+    font-size:1.2em;
+    max-width:12rem;
+    width:100%;
+    height:3.2rem;
+    border:none;
+    border-radius: 12rem;
+    background-color: #547980;
+    align-items: center;
+    justify-content: center;
+    
+}
+.btn a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* about page */
+h3{
+  color:rgb(190, 236, 136);
+  font-size: 4rem;
+  margin:0.5rem;
+  padding:1rem;
+}
+h4{
+  color:rgb(190, 236, 136);
+  font-size: 2rem;
+  margin:0.5rem;
+  padding:1rem;
+}
+
+.text-part ul li{
+  color: white;
+  margin:0.5rem;
+  line-height: 1.8rem;
+  padding:1rem;
+  text-wrap:wrap;
+  font-size: 1.2rem;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  word-break: break-word; /* Breaks long words */
+}
+/* skills */
+.skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back ul li, .front ul li{
+  list-style: none;
+}
+
+.front, .back{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  padding:1rem;
+  margin:1rem;
+}
+.front p,.back p{
+  color:rgb(190, 236, 136);
+  font-size: 2.2rem;
+  margin:0.5rem;
+  padding:1rem;
+}
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .main-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-container img {
+      margin: 1.5rem 0;
+  }
+
+  .footer ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer ul li {
+      margin: 0.5rem 0;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .menu-toggle:checked + .menu-icon + nav ul {
+      display: flex;
+  }
+  .projects img{
+    margin: 1.5rem 0;
+  }
+}
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul li {
+      margin: 0.5rem 0;
+      
+    }
+  
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  .skills{
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proj1, .proj2{
+   justify-content: center;
+  }
+    .main-container img {
+      margin: 1.5rem 0;
+    }
+  
+  
+    .footer ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer ul li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    .main-container p {
+      padding: 0.5rem;
+    }
+  
+    .btn {
+      padding: 0.5rem;
+    }
+  
+    .btn a {
+      font-size: 0.9em;
+    }
+  }
+
+  .projects{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    flex-direction: column;
+  }
+
+  .projects img{
+    width: 100%;
+    max-width: 40rem; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+  }
+  .proj1, .proj2{
+    margin:1.6rem ;
+  }
+
+
+  
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+#form-btn{
+  color:whitesmoke;
+}
+label {
+  margin-top: 1rem;
+  color: #333;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #476f68;
+}
+#contact-heading{
+  text-align: center;
+}
